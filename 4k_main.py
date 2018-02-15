@@ -22,7 +22,6 @@ while(cap.isOpened):
         frame4 = frame[1280:0, 2560:720]
         frame5 = frame[1280:720, 2560:1440]
 
-        cv2.imshow('frame', frame1)
         # write the flipped frame
         out1.write(frame1)
         out2.write(frame2)
