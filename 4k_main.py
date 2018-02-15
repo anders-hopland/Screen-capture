@@ -16,7 +16,13 @@ while(cap.isOpened):
 
     ret, frame = cap.read()
     if ret:
-        print(ret)
+
+        width = vcap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)   # float
+        height = vcap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT) # float
+
+        print(width)
+        print(height)
+
         frame1 = frame[0:720, 0:1280]
         frame2 = frame[720:1440, 0:1280]
         frame3 = frame[1440:2160, 0:1280]
