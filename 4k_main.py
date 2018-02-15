@@ -20,9 +20,6 @@ while(cap.isOpened):
         width = cap.get(3)   # float
         height = cap.get(4) # float
 
-        print(width)
-        print(height)
-
         frame1 = frame[0:720, 0:1280]
         frame2 = frame[720:1440, 0:1280]
         frame3 = frame[1440:2160, 0:1280]
@@ -35,6 +32,9 @@ while(cap.isOpened):
         out3.write(frame3)
         out4.write(frame4)
         out5.write(frame5)
+
+        # Playing out image sequence from one of the cameras
+        cv2.imshow('Frame', frame1)
 
     else:
         break
