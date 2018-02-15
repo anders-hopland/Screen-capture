@@ -5,22 +5,22 @@ cap = cv2.VideoCapture('udp://@192.168.1.1:9999')
 
 # Define the codec and create VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out1 = cv2.VideoWriter('output1.avi', fourcc, 30.0, (500, 500))
-out2 = cv2.VideoWriter('output2.avi', fourcc, 30.0, (500, 500))
-out3 = cv2.VideoWriter('output3.avi', fourcc, 30.0, (500, 500))
-out4 = cv2.VideoWriter('output4.avi', fourcc, 30.0, (500, 500))
-out5 = cv2.VideoWriter('output5.avi', fourcc, 30.0, (500, 500))
+out1 = cv2.VideoWriter('output1.avi', fourcc, 30.0, (1280, 720))
+out2 = cv2.VideoWriter('output2.avi', fourcc, 30.0, (1280, 720))
+out3 = cv2.VideoWriter('output3.avi', fourcc, 30.0, (1280, 720))
+out4 = cv2.VideoWriter('output4.avi', fourcc, 30.0, (1280, 720))
+out5 = cv2.VideoWriter('output5.avi', fourcc, 30.0, (1280, 720))
 
 while(cap.isOpened):
     ret, frame = cap.read()
 
     ret, frame = cap.read()
     if ret:
-        frame1 = frame[100:600, 600:1100]
-        frame2 = frame[100:600, 600:1100]
-        frame3 = frame[100:600, 600:1100]
-        frame4 = frame[100:600, 600:1100]
-        frame5 = frame[100:600, 600:1100]
+        frame1 = frame[0:0, 1280:720]
+        frame2 = frame[0:720, 1280:1440]
+        frame3 = frame[0:1440, 1280:2160]
+        frame4 = frame[1280:0, 2560:720]
+        frame5 = frame[1280:720, 2560:1440]
 
         cv2.imshow('frame', frame1)
         # write the flipped frame
