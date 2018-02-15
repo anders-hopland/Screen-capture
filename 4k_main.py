@@ -16,11 +16,12 @@ while(cap.isOpened):
 
     ret, frame = cap.read()
     if ret:
-        frame1 = frame[0:0, 1280:720]
-        frame2 = frame[0:720, 1280:1440]
-        frame3 = frame[0:1440, 1280:2160]
-        frame4 = frame[1280:0, 2560:720]
-        frame5 = frame[1280:720, 2560:1440]
+        print(ret)
+        frame1 = frame[0:720, 0:1280]
+        frame2 = frame[720:1440, 0:1280]
+        frame3 = frame[1440:2160, 0:1280]
+        frame4 = frame[0:720, 1280:2560]
+        frame5 = frame[720:1440, 1280:2560]
 
         # write the flipped frame
         out1.write(frame1)
