@@ -17,8 +17,8 @@ while(cap.isOpened):
     ret, frame = cap.read()
     if ret:
 
-        width = vcap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)   # float
-        height = vcap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT) # float
+        width = cap.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)   # float
+        height = cap.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT) # float
 
         print(width)
         print(height)
