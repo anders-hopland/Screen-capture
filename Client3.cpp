@@ -43,13 +43,13 @@ int main(int argc, char * argv[]) {
 
         capture >> frame;
         if(frame.rows > 0 && frame.cols > 0) {
-        imshow("send", frame);
+            imshow("send", frame);
 
-        waitKey(1);
+            waitKey(1);
 
-        cout << "Got image\n";
+            cout << "Got image\n";
         } else {
-        cout << "read invalid frame: " << frame << endl;
+            cout << "read invalid frame: " << frame << endl;
         }
     }
 
